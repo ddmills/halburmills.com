@@ -1,0 +1,71 @@
+@mixin clearfix {
+    &:before {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+}
+
+@mixin size-util($name, $size) {
+    .hide-below-#{$name} {
+        @media (max-width: ($size - 1)) {
+            display: none !important;
+        }
+    }
+
+    .hide-above-#{$name} {
+        @media (min-width: $size) {
+            display: none !important;
+        }
+    }
+}
+
+@mixin pull-right {
+    float : right !important;
+}
+
+@mixin pull-left {
+    float : left !important;
+}
+
+@include size-util(sm, $screen-sm);
+@include size-util(md, $screen-md);
+@include size-util(lg, $screen-lg);
+
+.clearfix {
+    @include clearfix();
+}
+
+.pull-right {
+    @include pull-right();
+}
+
+.pull-left {
+    @include pull-left();
+}
+
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.hr, hr {
+    border: 0px;
+    border-top: 1px solid $primary-color;
+    margin: 2em 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}

@@ -3,10 +3,9 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const deploy = require('gulp-gh-pages');
 
-gulp.task('cname', () => {
-    return gulp
-      .src('source/CNAME')
-      .pipe(gulp.dest('build'));
+gulp.task('copy', () => {
+    const cname = gulp.src('source/CNAME').pipe(gulp.dest('build'));
+    const images = gulp.src('source/images/**/*').pipe(gulp.dest('build/images'));
 });
 
 gulp.task('pug', () => {
@@ -18,7 +17,7 @@ gulp.task('pug', () => {
 
 gulp.task('sass', () => {
   return gulp
-    .src('source/**/*.scss')
+    .src('source/**/main.scss')
     .pipe(sass())
     .pipe(gulp.dest('build'));
 });
@@ -34,4 +33,4 @@ gulp.task('watch', () => {
   gulp.watch('source/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['cname', 'pug', 'sass']);
+gulp.task('default', ['copy', 'pug', 'sass']);
