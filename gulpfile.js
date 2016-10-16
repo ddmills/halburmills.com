@@ -3,6 +3,12 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const deploy = require('gulp-gh-pages');
 
+gulp.task('cname', () => {
+    return gulp
+      .src('source/CNAME')
+      .pipe(gulp.dest('build'));
+});
+
 gulp.task('pug', () => {
   return gulp
     .src('source/**/*.pug')
@@ -28,4 +34,4 @@ gulp.task('watch', () => {
   gulp.watch('source/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['pug', 'sass']);
+gulp.task('default', ['cname', 'pug', 'sass']);
