@@ -1,39 +1,26 @@
 extends base
 
-block content
-  .row
-    .col-5
-      img(src='images/poloroid.jpg', width='100%').fade-in-left
-    .col-7
-      h1 Dee &amp Brent
+include profile
 
-  .row
-    .col-12.col-md-6
-      img(src='images/wedding-party/dana.png').tile
-    .col-12.col-md-6
-      img(src='images/wedding-party/kerry.png').tile
-  .row
-    .col-12.col-md-6
-      img(src='images/wedding-party/elizabeth.png').tile
-    .col-12.col-md-6
-      img(src='images/wedding-party/andy.png').tile
-  .row
-    .col-12.col-md-6
-      img(src='images/wedding-party/dalton.png').tile
-    .col-12.col-md-6
-      img(src='images/wedding-party/tracy.png').tile
-  .row
-    .col-12.col-md-6
-      img(src='images/wedding-party/kayla.png').tile
-    .col-12.col-md-6
-      img(src='images/wedding-party/brian.png').tile
-  .row
-    .col-12.col-md-6
-      img(src='images/wedding-party/dwight.png').tile
-    .col-12.col-md-6
-      img(src='images/wedding-party/lisa.png').tile
-  .row
-    .col-12.col-md-6
-      img(src='images/wedding-party/brooke.png').tile
-    .col-12.col-md-6
-      img(src='images/wedding-party/oliver.png').tile
+block content
+  .profiles
+    .profiles-left
+      +profile-header('Maid of Honor')
+      +profile('Dana', 'Sister of the Bride')
+      +profile-header('Bride\'s Attendants')
+      +profile('Elizabeth', 'Cousin of the Bride')
+      +profile('Dalton', 'Brother of the Bride')
+      +profile('Kayla', 'Cousin of the Groom')
+      +profile('Dwight', 'Brother of the Bride')
+      +profile-header('Ring Bearer')
+      +profile('Oliver', 'Nephew of the Bride')
+    .profiles-right
+      +profile-header('Best Woman')
+      +profile('Kerry', 'Sister of the Groom')
+      +profile-header('Groom\'s Attendants')
+      +profile('Andy', 'Friend of the Couple')
+      +profile('Tracy', 'Sister of the Groom')
+      +profile('Brian', 'Cousin of the Groom')
+      +profile('Lisa', 'Sister of the Groom')
+      +profile-header('Flower Girl')
+      +profile('Brooke', 'Niece of the Groom')

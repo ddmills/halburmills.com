@@ -1,0 +1,11 @@
+mixin profile(name, relation, photo)
+  .profile
+    .profile-image
+        img(src='images/wedding-party/' + name.toLowerCase() + '.png')
+    .profile-info
+      h2.profile-name #{name}
+      p.profile-relation #{relation}
+
+mixin profile-header(text)
+  .profile
+    h1.profile-header #{text}

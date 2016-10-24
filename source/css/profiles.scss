@@ -1,0 +1,85 @@
+.profile-left {
+  @include clearfix();
+}
+
+.profile-right {
+  @include clearfix();
+}
+
+.profile {
+  margin-bottom: 30px;
+  @include clearfix();
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profiles-left,
+.profiles-right {
+  flex: 1 0 auto;
+  position: relative;
+  flex-basis: 100%;
+
+  @media (min-width: $screen-md) {
+    flex-basis: 50%;
+  }
+}
+
+.profiles-left {
+  & .profile {
+    @media (min-width: $screen-md) {
+      text-align: left;
+      padding-right: 15px;
+    }
+  }
+
+  & .profile-header {
+    text-align: left;
+  }
+
+  & .profile-image {
+    @media (min-width: $screen-md) {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
+.profiles-right {
+  & .profile {
+    @media (min-width: $screen-md) {
+      text-align: right;
+      padding-left: 15px;
+    }
+  }
+
+  & .profile-header {
+    text-align: right;
+  }
+
+  & .profile-image {
+    @media (min-width: $screen-md) {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+}
+
+.profile-image {
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $screen-md) {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.profile-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
