@@ -7342,7 +7342,8 @@ var _scrollmonitor2 = _interopRequireDefault(_scrollmonitor);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var tiles = document.getElementsByClassName('tile');
+var profilesLeft = document.querySelectorAll('.profiles-left .profile');
+var profilesRight = document.querySelectorAll('.profiles-right .profile');
 
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;
@@ -7350,15 +7351,15 @@ var _iteratorError = undefined;
 
 try {
   var _loop = function _loop() {
-    var tile = _step.value;
+    var profile = _step.value;
 
-    var watcher = _scrollmonitor2.default.create(tile);
-    watcher.enterViewport(function () {
-      tile.classList.add('fade-in-left');
+    var watcher = _scrollmonitor2.default.create(profile);
+    watcher.one('enterViewport', function () {
+      profile.classList.add('fade-in-left');
     });
   };
 
-  for (var _iterator = tiles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+  for (var _iterator = profilesLeft[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
     _loop();
   }
 } catch (err) {
@@ -7378,6 +7379,38 @@ try {
 
 ;
 
-console.log('hello world');
+var _iteratorNormalCompletion2 = true;
+var _didIteratorError2 = false;
+var _iteratorError2 = undefined;
+
+try {
+  var _loop2 = function _loop2() {
+    var profile = _step2.value;
+
+    var watcher = _scrollmonitor2.default.create(profile);
+    watcher.one('enterViewport', function () {
+      profile.classList.add('fade-in-right');
+    });
+  };
+
+  for (var _iterator2 = profilesRight[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+    _loop2();
+  }
+} catch (err) {
+  _didIteratorError2 = true;
+  _iteratorError2 = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion2 && _iterator2.return) {
+      _iterator2.return();
+    }
+  } finally {
+    if (_didIteratorError2) {
+      throw _iteratorError2;
+    }
+  }
+}
+
+;
 
 },{"babel-polyfill":1,"scrollmonitor":298}]},{},[299]);

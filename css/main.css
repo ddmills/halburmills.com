@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  box-sizing: border-box; }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -89,6 +92,9 @@ table {
 
 .no-margin {
   margin: 0 !important; }
+
+.text-center {
+  text-align: center; }
 
 * {
   box-sizing: border-box; }
@@ -471,14 +477,128 @@ div.col-middle {
   .hide-lg {
     display: none; } }
 
-@keyframes fade {
+.profile-left:before {
+  display: table;
+  content: ""; }
+
+.profile-left:after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+.profile-right:before {
+  display: table;
+  content: ""; }
+
+.profile-right:after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+.profile {
+  margin-bottom: 30px; }
+  .profile:before {
+    display: table;
+    content: ""; }
+  .profile:after {
+    display: table;
+    clear: both;
+    content: ""; }
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap; }
+
+.profiles-left,
+.profiles-right {
+  flex: 1 0 auto;
+  position: relative;
+  flex-basis: 100%; }
+  @media (min-width: 769px) {
+    .profiles-left,
+    .profiles-right {
+      flex-basis: 50%; } }
+
+@media (min-width: 769px) {
+  .profiles-left .profile {
+    text-align: left;
+    padding-right: 15px; } }
+
+.profiles-left .profile-header {
+  text-align: left; }
+
+@media (min-width: 769px) {
+  .profiles-left .profile-image {
+    float: left;
+    margin-right: 10px; } }
+
+@media (min-width: 769px) {
+  .profiles-right .profile {
+    text-align: right;
+    padding-left: 15px; } }
+
+.profiles-right .profile-header {
+  text-align: right; }
+
+@media (min-width: 769px) {
+  .profiles-right .profile-image {
+    float: right;
+    margin-left: 10px; } }
+
+.profile-image {
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto; }
+  @media (min-width: 769px) {
+    .profile-image {
+      width: 140px;
+      height: 140px; } }
+
+.profile-image img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.page-landing {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: url(../images/cover.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.page-landing-text {
+  white-space: pre;
+  font-size: 8vw;
+  font-weight: 900;
+  line-height: 1em;
+  color: rgba(247, 247, 247, 0.82);
+  font-family: Georgia;
+  width: 100%;
+  text-align: center; }
+
+@keyframes fade-in-left {
   from {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0); }
+    transform: translate3d(-10%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0); }
   to {
     opacity: 1;
     transform: none; } }
 
 .fade-in-left {
   animation-duration: 1s;
-  animation-name: fade; }
+  animation-name: fade-in-left; }
+
+.fade-in-right {
+  animation-duration: 1s;
+  animation-name: fade-in-right; }
