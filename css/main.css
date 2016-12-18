@@ -85,7 +85,7 @@ table {
 
 .hr, hr {
   border: 0px;
-  border-top: 1px solid #9c3c3c;
+  border-top: 1px solid #aa93a5;
   margin: 2em 0; }
 
 .hide {
@@ -565,7 +565,8 @@ div.col-middle {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  text-align: center; }
+  text-align: center;
+  border-top: 5px solid #aa93a5; }
 
 .page-landing-text {
   position: absolute;
