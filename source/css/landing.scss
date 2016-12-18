@@ -2,20 +2,47 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: url(../images/cover.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  text-align: center;
+  text-align: center;
+  // background: url(../images/cover.jpg) no-repeat center center;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 }
 
 .page-landing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   white-space: pre;
-  font-size: 8vw;
-  font-weight: 900;
-  line-height: 1em;
-  color: rgba(247, 247, 247, 0.82);
+}
+
+.page-landing-primary {
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.4em;
+  letter-spacing: .1em;
+  font-size: 1.4em;
+
+  @media (min-width: $screen-md) {
+    font-size: 3em;
+  }
+}
+
+.page-landing-tertiary {
   font-family: Georgia;
-  width: 100%;
-  text-align: center;
+  font-style: italic;
+}
+
+.page-landing-secondary {
+  font-family: Georgia;
+  font-style: italic;
+  line-height: 4em;
+}
+
+.flourish img {
+  width: 100px;
 }

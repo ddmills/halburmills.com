@@ -7,9 +7,16 @@ const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
+gulp.task('images', () => {
+  return gulp
+    .src('source/images/**/*')
+    .pipe(gulp.dest('build/images'));
+});
+
 gulp.task('copy', () => {
-    const cname = gulp.src('source/CNAME').pipe(gulp.dest('build'));
-    const images = gulp.src('source/images/**/*').pipe(gulp.dest('build/images'));
+  return gulp
+    .src('source/CNAME')
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('pug', () => {
@@ -47,6 +54,7 @@ gulp.task('watch', () => {
   gulp.watch('source/**/*.pug', ['pug']);
   gulp.watch('source/**/*.scss', ['sass']);
   gulp.watch('source/**/*.js', ['babel']);
+  gulp.watch('source/images/**/*', ['images']);
 });
 
-gulp.task('default', ['copy', 'pug', 'babel', 'sass']);
+gulp.task('default', ['copy', 'images', 'pug', 'babel', 'sass']);

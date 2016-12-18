@@ -1,5 +1,8 @@
-$body-fonts   : Arial, Helvetica, sans-serif;
-$header-fonts : Georgia, Times, serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald');
+
+$body-font    : Arial, Helvetica, sans-serif;
+$header-font  : Georgia, Times, serif;
+$primary-font : 'Oswald', 'Open Sans', sans-serif, Georgia, Times, serif;
 $font-size    : 14px;
 $font-color   : rgb(85, 85, 85);
 $anchor-color : rgb(34, 139, 34);
