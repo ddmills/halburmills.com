@@ -22,7 +22,7 @@ gulp.task('copy', () => {
 
 gulp.task('pug', () => {
   return gulp
-    .src('source/**/*.pug')
+    .src('source/index.pug')
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('build'));
