@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const plumber = require('gulp-plumber');
 const deploy = require('gulp-gh-pages');
 const babel = require('babelify');
 const browserify = require('browserify');
@@ -22,6 +23,7 @@ gulp.task('copy', () => {
 gulp.task('pug', () => {
   return gulp
     .src('source/**/*.pug')
+    .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('build'));
 });
@@ -29,7 +31,8 @@ gulp.task('pug', () => {
 gulp.task('sass', () => {
   return gulp
     .src('source/**/main.scss')
-    .pipe(sass())
+    .pipe(plumber())
+    .pipe(sass.sync())
     .pipe(gulp.dest('build'));
 });
 
