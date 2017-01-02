@@ -67,15 +67,24 @@
   }
 }
 
+.profile-header {
+
+}
+
 .profile-image {
-  margin-bottom: 10px;
   width: 100%;
   height: auto;
+  padding: 4px 30px;
 
   @media (min-width: $screen-md) {
+    padding: 0;
     width: 140px;
     height: 140px;
   }
+}
+
+.profile-info {
+  padding: 4px 30px;
 }
 
 .profile-image img {

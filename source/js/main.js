@@ -17,3 +17,11 @@ for (let profile of profilesRight) {
     profile.classList.add('fade-in-right');
   });
 };
+
+const overlay = document.querySelector('.map-overlay');
+const iframe = document.querySelector('.map iframe');
+
+overlay.onclick = () => {
+  iframe.style.pointerEvents = 'auto';
+  overlay.style.pointerEvents = 'none';
+};

@@ -1,26 +1,5 @@
 extends base
 
-include profile
-
 block content
-  .profiles
-    .profiles-left
-      +profile-header('Maid of Honor')
-      +profile('Dana', 'Sister of the Bride')
-      +profile-header('Bride\'s Attendants')
-      +profile('Elizabeth', 'Cousin of the Bride')
-      +profile('Dalton', 'Brother of the Bride')
-      +profile('Kayla', 'Cousin of the Groom')
-      +profile('Dwight', 'Brother of the Bride')
-      +profile-header('Ring Bearer')
-      +profile('Oliver', 'Cousin of the Bride')
-    .profiles-right
-      +profile-header('Best Woman')
-      +profile('Kerry', 'Sister of the Groom')
-      +profile-header('Groom\'s Attendants')
-      +profile('Andy', 'Friend of the Couple')
-      +profile('Tracy', 'Sister of the Groom')
-      +profile('Brian', 'Cousin of the Groom')
-      +profile('Lisa', 'Sister of the Groom')
-      +profile-header('Flower Girl')
-      +profile('Brooke', 'Niece of the Groom')
+  include profiles
+  include location

@@ -29,7 +29,6 @@ html, body {
 .page-content {
   flex: 1 1 auto;
   width: 100%;
-  min-height: 340px;
 
   display: flex;
   flex-direction: row;
@@ -38,6 +37,10 @@ html, body {
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
+}
+
+.page-content-alternate {
+  background-color: #f6f4f6;
 }
 
 .page-footer {
