@@ -124,13 +124,15 @@ html, body {
 .page-content {
   flex: 1 1 auto;
   width: 100%;
-  min-height: 340px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch; }
+
+.page-content-alternate {
+  background-color: #f6f4f6; }
 
 .page-footer {
   flex: 0 0 auto;
@@ -166,12 +168,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased; }
 
+.primary-font {
+  font-family: "Oswald", "Open Sans", sans-serif, Georgia, Times, serif; }
+
 body {
   line-height: 1.42857em; }
 
 a {
   text-decoration: none;
-  color: forestgreen; }
+  color: #98588c; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
@@ -183,7 +188,7 @@ h1 {
   font-size: 2.1em; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 1.7em; }
 
 h3 {
   font-size: 1.8em; }
@@ -196,6 +201,9 @@ h5 {
 
 h5 {
   font-size: 1.0em; }
+
+.bold {
+  font-weight: bold; }
 
 /*
  * Generic grid styles
@@ -547,13 +555,17 @@ div.col-middle {
     margin-left: 10px; } }
 
 .profile-image {
-  margin-bottom: 10px;
   width: 100%;
-  height: auto; }
+  height: auto;
+  padding: 4px 30px; }
   @media (min-width: 769px) {
     .profile-image {
+      padding: 0;
       width: 140px;
       height: 140px; } }
+
+.profile-info {
+  padding: 4px 30px; }
 
 .profile-image img {
   display: block;
@@ -597,6 +609,26 @@ div.col-middle {
 
 .flourish img {
   width: 100px; }
+
+.map {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: 400px; }
+  .map iframe {
+    display: block;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    border: none; }
+
+.map-overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgba(128, 0, 128, 0.01); }
 
 @keyframes fade-in-left {
   from {

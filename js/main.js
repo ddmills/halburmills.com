@@ -7037,4 +7037,12 @@ try {
 
 ;
 
+var overlay = document.querySelector('.map-overlay');
+var iframe = document.querySelector('.map iframe');
+
+overlay.onclick = function () {
+  iframe.style.pointerEvents = 'auto';
+  overlay.style.pointerEvents = 'none';
+};
+
 },{"babel-polyfill":1,"scrollmonitor":298}]},{},[299]);
