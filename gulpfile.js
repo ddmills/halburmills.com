@@ -7,6 +7,7 @@ const babel = require('babelify');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
+const browserSync = require('browser-sync');
 
 gulp.task('images', () => {
   return gulp
@@ -53,11 +54,19 @@ gulp.task('deploy', () => {
     .pipe(deploy());
 });
 
-gulp.task('watch', () => {
-  gulp.watch('source/**/*.pug', ['pug']);
-  gulp.watch('source/**/*.scss', ['sass']);
-  gulp.watch('source/**/*.js', ['babel']);
-  gulp.watch('source/images/**/*', ['images']);
+gulp.task('watch', ['build'], () => {
+  browserSync({
+    server: {
+      baseDir: 'build',
+    },
+    open: false,
+  });
+
+  gulp.watch('source/**/*.pug', ['pug', browserSync.reload]);
+  gulp.watch('source/**/*.scss', ['sass', browserSync.reload]);
+  gulp.watch('source/**/*.js', ['babel', browserSync.reload]);
+  gulp.watch('source/images/**/*', ['images', browserSync.reload]);
 });
 
-gulp.task('default', ['copy', 'images', 'pug', 'babel', 'sass']);
+gulp.task('build', ['copy', 'images', 'pug', 'babel', 'sass']);
+gulp.task('default', ['build']);
