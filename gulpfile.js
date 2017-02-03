@@ -33,7 +33,7 @@ gulp.task('sass', () => {
   return gulp
     .src('source/**/main.scss')
     .pipe(plumber())
-    .pipe(sass.sync())
+    .pipe(sass.sync({ includePaths: ['node_modules/susy/sass'] }))
     .pipe(gulp.dest('build'));
 });
 
