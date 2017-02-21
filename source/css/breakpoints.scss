@@ -1,0 +1,19 @@
+@mixin size($size) {
+  @if $size == 'sm' {
+    @media (min-width: $screen-sm) {
+      @content;
+    }
+  }
+
+  @if $size == 'md' {
+    @media (min-width: $screen-md) {
+      @content;
+    }
+  }
+
+  @if $size == 'lg' {
+    @media (min-width: $screen-lg) {
+      @content;
+    }
+  }
+}

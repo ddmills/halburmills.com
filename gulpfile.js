@@ -22,10 +22,14 @@ gulp.task('copy', () => {
 });
 
 gulp.task('pug', () => {
+  const localsPath = './pug.locals.json';
+  const locals = require(localsPath);
+  delete require.cache[require.resolve(localsPath)];
+
   return gulp
     .src('source/index.pug')
     .pipe(plumber())
-    .pipe(pug())
+    .pipe(pug({ locals }))
     .pipe(gulp.dest('build'));
 });
 
@@ -63,6 +67,7 @@ gulp.task('watch', ['build'], () => {
   });
 
   gulp.watch('source/**/*.pug', ['pug', browserSync.reload]);
+  gulp.watch('pug.locals.json', ['pug', browserSync.reload]);
   gulp.watch('source/**/*.scss', ['sass', browserSync.reload]);
   gulp.watch('source/**/*.js', ['babel', browserSync.reload]);
   gulp.watch('source/images/**/*', ['images', browserSync.reload]);

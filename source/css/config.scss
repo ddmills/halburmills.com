@@ -15,3 +15,11 @@ $screen-md : 769px; // Medium screen - tablet
 $screen-lg : 993px; // Large screen - desktop
 
 $primary-color : rgb(170, 147, 165);
+
+$susy: (
+  columns : 12,
+  gutters : 1/4,
+  math    : fluid,
+  output  : float,
+  gutter-position : inside,
+);

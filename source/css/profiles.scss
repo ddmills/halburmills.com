@@ -1,90 +1,68 @@
-.profile-left {
-  @include clearfix();
-}
-
-.profile-right {
-  @include clearfix();
+.profiles {
+  @include container;
 }
 
 .profile {
   margin-bottom: 30px;
-  @include clearfix();
-}
+  padding: 24px;
 
-.profiles {
-  display: flex;
-  flex-wrap: wrap;
+  @include size(md) {
+    padding: 0;
+  }
+
+  @include clearfix();
 }
 
 .profiles-left,
 .profiles-right {
-  flex: 1 0 auto;
-  position: relative;
-  flex-basis: 100%;
-
-  @media (min-width: $screen-md) {
-    flex-basis: 50%;
+  @include size(sm) {
+    @include span(100%);
   }
 }
 
 .profiles-left {
-  & .profile {
-    @media (min-width: $screen-md) {
-      text-align: left;
-      padding-right: 15px;
-    }
-  }
-
-  & .profile-header {
-    text-align: left;
-  }
-
-  & .profile-image {
-    @media (min-width: $screen-md) {
-      float: left;
-      margin-right: 10px;
-    }
+  @include size(md) {
+    @include span(50%);
   }
 }
 
 .profiles-right {
-  & .profile {
-    @media (min-width: $screen-md) {
-      text-align: right;
-      padding-left: 15px;
-    }
-  }
-
-  & .profile-header {
-    text-align: right;
-  }
-
-  & .profile-image {
-    @media (min-width: $screen-md) {
+  @include size(md) {
+    & .profile-image {
       float: right;
-      margin-left: 10px;
     }
+
+    & .profile-info,
+    .profile-header {
+      text-align: right;
+    }
+
+    @include span(last 50%);
   }
-}
-
-.profile-header {
-
 }
 
 .profile-image {
-  width: 100%;
   height: auto;
-  padding: 4px 30px;
 
-  @media (min-width: $screen-md) {
-    padding: 0;
-    width: 140px;
-    height: 140px;
+  @include size(sm) {
+    @include span(100%);
+  }
+
+  @include size(md) {
+    @include span(4 of 12);
   }
 }
 
 .profile-info {
-  padding: 4px 30px;
+  padding: 4px 0;
+
+  @include size(sm) {
+    @include span(100%);
+  }
+
+  @include size(md) {
+    @include span(8 of 12);
+  }
 }
 
 .profile-image img {
