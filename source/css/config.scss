@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Nunito+Sans:400,400i,700|Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700|Playfair+Display');
 
-$body-font    : 'Nunito Sans', Montserrat, 'Open Sans', Helvetica, sans-serif;
+$body-font    : 'Nunito Sans', 'Open Sans', Helvetica, sans-serif;
 $header-font  : 'Playfair Display', Georgia, Times, serif;
 $font-size    : 16px;
+
 $font-color   : rgb(74, 65, 78);
 $anchor-color : rgb(152, 88, 140);
 $primary-color : rgb(159, 126, 152);
@@ -13,8 +14,6 @@ $background-color : rgb(255, 255, 255);
 $screen-sm : 481px; // Small screen - phone
 $screen-md : 740px; // Medium screen - tablet
 $screen-lg : 993px; // Large screen - desktop
-
-
 
 $susy: (
   columns : 12,
