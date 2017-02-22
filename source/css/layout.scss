@@ -49,7 +49,6 @@ html, body {
 }
 
 .container {
-  // @include container(70em);
   width: 100%;
   margin: 15px auto;
 
@@ -58,13 +57,16 @@ html, body {
 
   @include clearfix();
 
-  @media (min-width: $screen-md) {
-    margin: 15px auto;
-    width: 750px;
+  @include size(sm) {
+    width: 500px;
+  }
+
+  @include size(md) {
+    width: 600px;
   }
 
   @media (min-width: $screen-lg) {
     margin: 25px auto;
-    width: 980px;
+    width: 720px;
   }
 }

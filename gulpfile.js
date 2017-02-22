@@ -4,10 +4,14 @@ const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const deploy = require('gulp-gh-pages');
 const babel = require('babelify');
+const merge = require('merge-stream');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const browserSync = require('browser-sync');
+
+const iconCSSPath = './node_modules/mdi/css/**/*';
+const iconFontPath = './node_modules/mdi/fonts/**/*';
 
 gulp.task('images', () => {
   return gulp
@@ -15,11 +19,25 @@ gulp.task('images', () => {
     .pipe(gulp.dest('build/images'));
 });
 
-gulp.task('copy', () => {
+gulp.task('icons', () => {
+  const css = gulp
+    .src(iconCSSPath)
+    .pipe(gulp.dest('build/css'));
+
+  const font = gulp
+    .src(iconFontPath)
+    .pipe(gulp.dest('build/fonts'));
+
+  return merge(css, font);
+});
+
+gulp.task('cname', () => {
   return gulp
     .src('source/CNAME')
     .pipe(gulp.dest('build'));
 });
+
+gulp.task('copy', ['images', 'cname', 'icons']);
 
 gulp.task('pug', () => {
   const localsPath = './pug.locals.json';
@@ -73,5 +91,5 @@ gulp.task('watch', ['build'], () => {
   gulp.watch('source/images/**/*', ['images', browserSync.reload]);
 });
 
-gulp.task('build', ['copy', 'images', 'pug', 'babel', 'sass']);
+gulp.task('build', ['copy', 'pug', 'babel', 'sass']);
 gulp.task('default', ['build']);

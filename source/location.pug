@@ -1,12 +1,26 @@
 include section
 
 +section()
-  h1 Time &amp; Place
-  h4.bold Sunday, September 3rd, 2017
-  p at the
-  h4.bold Radisson Hotel
-  p 200 Harborview Plaza
-  p La Crosse, Wisconsin
-  p 54601
+  h1
+    | Time &amp; Place
+
+  p.lead Sunday, September 3rd, 2017 at the Radisson Hotel.
+
+  h3 Discounted rates available!
+  p
+    | Ask for the <em>“Mills-Halbur wedding rate.”</em>
+    | Rooms must be reserved by
+    | <b>Thursday, August 3rd</b>
+    | for reduced rate. The reduced rate offers a Standard King for $159
+    | and a Standard two Queen for $175.&nbsp;
+    a(href=hotel.url) reservation information
+    |.
+
+  h3 Radisson Hotel address
+
+  p
+    | 200 Harborview Plaza<br>
+    | La Crosse, Wisconsin<br>
+    | 54601
   a.bold(href=location.directions) Get Directions
   include map

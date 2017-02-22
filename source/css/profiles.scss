@@ -13,6 +13,10 @@
   @include clearfix();
 }
 
+.profile-name {
+  margin-bottom: .2em;
+}
+
 .profiles-left,
 .profiles-right {
   @include size(sm) {

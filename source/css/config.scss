@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Nunito+Sans:400,400i,700|Playfair+Display');
 
-$body-font    : Arial, Helvetica, sans-serif;
-$header-font  : Georgia, Times, serif;
-$primary-font : 'Oswald', 'Open Sans', sans-serif, Georgia, Times, serif;
-$font-size    : 14px;
-$font-color   : rgb(85, 85, 85);
+$body-font    : 'Nunito Sans', Montserrat, 'Open Sans', Helvetica, sans-serif;
+$header-font  : 'Playfair Display', Georgia, Times, serif;
+$font-size    : 16px;
+$font-color   : rgb(74, 65, 78);
 $anchor-color : rgb(152, 88, 140);
+$primary-color : rgb(159, 126, 152);
 $line-height  : 1.42857143em;
 
 $background-color : rgb(255, 255, 255);
 
 $screen-sm : 481px; // Small screen - phone
-$screen-md : 769px; // Medium screen - tablet
+$screen-md : 740px; // Medium screen - tablet
 $screen-lg : 993px; // Large screen - desktop
 
-$primary-color : rgb(170, 147, 165);
+
 
 $susy: (
   columns : 12,

@@ -10,10 +10,6 @@ html {
   -moz-osx-font-smoothing: antialiased;
 }
 
-.primary-font {
-  font-family: $primary-font;
-}
-
 body {
   line-height: $line-height;
 }
@@ -26,20 +22,20 @@ a {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: .86em;
   font-family: $header-font;
 }
 
 h1 {
-  font-size: 2.1em;
+  font-size: 2.8em;
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 h4 {
@@ -54,6 +50,21 @@ h5 {
   font-size: 1.0em;
 }
 
+p {
+  margin-bottom: 1em;
+}
+
+b,
+strong,
 .bold {
   font-weight: bold;
+}
+
+em,
+.italic {
+  font-style: italic;
+}
+
+.lead {
+  font-size: 1.2em;
 }
