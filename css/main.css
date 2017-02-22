@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Nunito+Sans:400,400i,700|Playfair+Display");
 * {
   box-sizing: border-box; }
 
@@ -47,11 +47,11 @@ table {
   .hide-above-sm {
     display: none !important; } }
 
-@media (max-width: 768px) {
+@media (max-width: 739px) {
   .hide-below-md {
     display: none !important; } }
 
-@media (min-width: 769px) {
+@media (min-width: 740px) {
   .hide-above-md {
     display: none !important; } }
 
@@ -85,7 +85,7 @@ table {
 
 .hr, hr {
   border: 0px;
-  border-top: 1px solid #aa93a5;
+  border-top: 1px solid #9f7e98;
   margin: 2em 0; }
 
 .hide {
@@ -106,7 +106,7 @@ html, body {
   height: 100%;
   width: 100%;
   background: white;
-  color: #555555; }
+  color: #4a414e; }
 
 .page-wrapper {
   display: flex;
@@ -150,26 +150,25 @@ html, body {
     display: table;
     clear: both;
     content: ""; }
-  @media (min-width: 769px) {
+  @media (min-width: 481px) {
     .container {
-      margin: 15px auto;
-      width: 750px; } }
+      width: 500px; } }
+  @media (min-width: 740px) {
+    .container {
+      width: 600px; } }
   @media (min-width: 993px) {
     .container {
       margin: 25px auto;
-      width: 980px; } }
+      width: 720px; } }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: "Nunito Sans", Montserrat, "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.4;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased; }
-
-.primary-font {
-  font-family: "Oswald", "Open Sans", sans-serif, Georgia, Times, serif; }
 
 body {
   line-height: 1.42857em; }
@@ -181,17 +180,17 @@ a {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 0.5em;
-  font-family: Georgia, Times, serif; }
+  margin-bottom: .86em;
+  font-family: "Playfair Display", Georgia, Times, serif; }
 
 h1 {
-  font-size: 2.1em; }
+  font-size: 2.8em; }
 
 h2 {
-  font-size: 1.7em; }
+  font-size: 2em; }
 
 h3 {
-  font-size: 1.8em; }
+  font-size: 1.6em; }
 
 h4 {
   font-size: 1.2em; }
@@ -202,8 +201,20 @@ h5 {
 h5 {
   font-size: 1.0em; }
 
+p {
+  margin-bottom: 1em; }
+
+b,
+strong,
 .bold {
   font-weight: bold; }
+
+em,
+.italic {
+  font-style: italic; }
+
+.lead {
+  font-size: 1.2em; }
 
 /*
  * Generic grid styles
@@ -375,7 +386,7 @@ div.col-middle {
 /*
  * Medium viewport (tablets)
  */
-@media (min-width: 769px) {
+@media (min-width: 740px) {
   div.col-md-1 {
     flex-basis: 8.3333333333%; }
   div.col-md-2 {
@@ -498,7 +509,7 @@ div.col-middle {
 .profile {
   margin-bottom: 30px;
   padding: 24px; }
-  @media (min-width: 769px) {
+  @media (min-width: 740px) {
     .profile {
       padding: 0; } }
   .profile:before {
@@ -508,6 +519,9 @@ div.col-middle {
     display: table;
     clear: both;
     content: ""; }
+
+.profile-name {
+  margin-bottom: .2em; }
 
 @media (min-width: 481px) {
   .profiles-left,
@@ -520,7 +534,7 @@ div.col-middle {
     padding-left: 0.83333%;
     padding-right: 0.83333%; } }
 
-@media (min-width: 769px) {
+@media (min-width: 740px) {
   .profiles-left {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -530,7 +544,7 @@ div.col-middle {
     padding-left: 0.83333%;
     padding-right: 0.83333%; } }
 
-@media (min-width: 769px) {
+@media (min-width: 740px) {
   .profiles-right {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -556,7 +570,7 @@ div.col-middle {
       float: left;
       padding-left: 0.83333%;
       padding-right: 0.83333%; } }
-  @media (min-width: 769px) {
+  @media (min-width: 740px) {
     .profile-image {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -577,7 +591,7 @@ div.col-middle {
       float: left;
       padding-left: 0.83333%;
       padding-right: 0.83333%; } }
-  @media (min-width: 769px) {
+  @media (min-width: 740px) {
     .profile-info {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -598,7 +612,7 @@ div.col-middle {
   overflow: hidden;
   text-align: center;
   text-align: center;
-  border-top: 5px solid #aa93a5; }
+  border-top: 5px solid #9f7e98; }
 
 .page-landing-text {
   position: absolute;
@@ -608,13 +622,13 @@ div.col-middle {
   white-space: pre; }
 
 .page-landing-primary {
-  font-family: "Oswald", "Open Sans", sans-serif, Georgia, Times, serif;
+  font-family: "Playfair Display", Georgia, Times, serif;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.4em;
   letter-spacing: .1em;
   font-size: 1.4em; }
-  @media (min-width: 769px) {
+  @media (min-width: 740px) {
     .page-landing-primary {
       font-size: 3em; } }
 
