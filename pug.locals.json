@@ -5,5 +5,15 @@
   },
   "hotel": {
     "url": "https://www.radisson.com/la-crosse-hotel-wi-54601/la_cross"
+  },
+  "registry": {
+    "amazon": {
+      "url": "https://www.amazon.com/wedding/brent-halbur-deandrea-mills-la-crosse-september-2017/registry/3A0E669X03HF2",
+      "logo": "images/amazon-logo.png"
+    },
+    "target": {
+      "url": "http://www.target.com/gift-registry/giftgiver?registryId=fbc8ba7da2fd41ce8ed7b9f32819ac7e",
+      "logo": "images/target-logo.png"
+    }
   }
 }

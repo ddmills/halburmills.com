@@ -1,0 +1,19 @@
+.registries {
+  display: flex;
+}
+
+.registry {
+  padding: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .07s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  & > img {
+    width: 100%;
+  }
+}
