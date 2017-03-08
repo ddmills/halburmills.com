@@ -1,3 +1,6 @@
+**yarn**
+*Install dependencies*
+
 **yarn run build**
 *Compile sass, pug, and es6*
 
