@@ -175,7 +175,10 @@ body {
 
 a {
   text-decoration: none;
-  color: #98588c; }
+  color: #98588c;
+  font-weight: bold; }
+  a:hover {
+    color: #683c5f; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
@@ -215,6 +218,13 @@ em,
 
 .lead {
   font-size: 1.2em; }
+
+.list {
+  margin-bottom: 1em;
+  margin-left: 2em;
+  list-style: disc; }
+  .list > * {
+    margin: .15em 0; }
 
 /*
  * Generic grid styles
@@ -651,7 +661,7 @@ div.col-middle {
   padding: 24px;
   cursor: pointer;
   text-decoration: none;
-  opacity: .7;
+  opacity: .8;
   transition: opacity .07s; }
   .registry:hover {
     opacity: 1; }
