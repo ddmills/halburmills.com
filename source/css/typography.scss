@@ -17,6 +17,11 @@ body {
 a {
   text-decoration: none;
   color: $anchor-color;
+  font-weight: bold;
+
+  &:hover {
+    color: darken($anchor-color, 15%);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,4 +72,14 @@ em,
 
 .lead {
   font-size: 1.2em;
+}
+
+.list {
+  margin-bottom: 1em;
+  margin-left: 2em;
+  list-style: disc;
+
+  & > * {
+    margin: .15em 0;
+  }
 }
