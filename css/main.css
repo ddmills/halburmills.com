@@ -644,6 +644,20 @@ div.col-middle {
 .flourish img {
   width: 100px; }
 
+.registries {
+  display: flex; }
+
+.registry {
+  padding: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .07s; }
+  .registry:hover {
+    opacity: 1; }
+  .registry > img {
+    width: 100%; }
+
 .map {
   width: 100%;
   display: block;
