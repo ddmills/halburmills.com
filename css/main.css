@@ -187,13 +187,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, Times, serif; }
 
 h1 {
-  font-size: 2.8em; }
+  font-size: 2em; }
+  @media (min-width: 740px) {
+    h1 {
+      font-size: 2.4em; } }
 
 h2 {
-  font-size: 2em; }
+  font-size: 1.54em; }
+  @media (min-width: 740px) {
+    h2 {
+      font-size: 1.8em; } }
 
 h3 {
-  font-size: 1.6em; }
+  font-size: 1.25em; }
+  @media (min-width: 740px) {
+    h3 {
+      font-size: 1.6em; } }
 
 h4 {
   font-size: 1.2em; }
@@ -649,7 +658,8 @@ div.col-middle {
 .page-landing-secondary {
   font-family: Georgia;
   font-style: italic;
-  line-height: 4em; }
+  line-height: 2em;
+  margin-top: 2em; }
 
 .flourish img {
   width: 100px; }
@@ -658,7 +668,7 @@ div.col-middle {
   display: flex; }
 
 .registry {
-  padding: 24px;
+  padding: 16px;
   cursor: pointer;
   text-decoration: none;
   opacity: .8;
@@ -667,6 +677,9 @@ div.col-middle {
     opacity: 1; }
   .registry > img {
     width: 100%; }
+  @media (min-width: 740px) {
+    .registry {
+      padding: 40px 80px; } }
 
 .map {
   width: 100%;
