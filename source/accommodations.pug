@@ -1,10 +1,14 @@
 include section
 
 +section()
-  h1 Time &amp; Place
-
-  p.lead
-    | The wedding will take place on <b>Sunday, September 3rd, 2017</b> at the <b>Radisson Hotel</b>.&nbsp;
+  h1 Accommodations
+  
+  p
+    | Stay at the Radisson Hotel for a discounted rate. Call the Radisson Hotel (
+    a(href="tel:+1-608-784-6680") 608-784-6680
+    |) and ask for the <b>“Mills-Halbur wedding rate.”</b>
+    | Rooms must be reserved by <b>Thursday, August 3rd</b>
+    | for reduced rate.
 
   p
     i.mdi.mdi-city &nbsp;
@@ -13,21 +17,14 @@ include section
       | 200 Harborview Plaza<br>
       | La Crosse, Wisconsin<br>
       | 54601
-
-  include map
-
-  h2 Discounted Rates Available!
-  p
-    | Stay at the Radisson Hotel for a discounted rate. Call the Radisson Hotel (
-    a(href="tel:+1-608-784-6680") 608-784-6680
-    |) and ask for the <b>“Mills-Halbur wedding rate.”</b>
-    | Rooms must be reserved by <b>Thursday, August 3rd</b>
-    | for reduced rate.
+      
   p
     | The reduced rate offers a Standard King for <b>$159</b>
     | and a Standard two Queen for <b>$175</b>.&nbsp;
     a(href=hotel.url) More information about Radisson Hotel
     |.
+    
+  include map
 
   h2 Other Nearby Hotels
 

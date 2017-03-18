@@ -3,7 +3,7 @@
 }
 
 .registry {
-  padding: 24px;
+  padding: 16px;
   cursor: pointer;
   text-decoration: none;
   opacity: .8;
@@ -15,5 +15,9 @@
 
   & > img {
     width: 100%;
+  }
+
+  @include size(md) {
+    padding: 40px 80px;
   }
 }

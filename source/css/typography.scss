@@ -32,15 +32,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.8em;
+  font-size: 2em;
+
+  @include size(md) {
+    font-size: 2.4em;
+  }
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.54em;
+
+  @include size(md) {
+    font-size: 1.8em;
+  }
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 1.25em;
+
+  @include size(md) {
+    font-size: 1.6em;
+  }
 }
 
 h4 {
