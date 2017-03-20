@@ -2,6 +2,9 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
+const uglifycss = require('gulp-uglifycss');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 const deploy = require('gulp-gh-pages');
 const babel = require('babelify');
 const merge = require('merge-stream');
@@ -57,10 +60,12 @@ gulp.task('pug', () => {
 gulp.task('sass', () => {
   return gulp
     .src('source/**/main.scss')
+    .pipe(sourcemaps.init())
     .pipe(plumber())
-    .pipe(sass.sync({ includePaths: [
-      'node_modules/',
-    ]}))
+    .pipe(sass.sync({ includePaths: ['node_modules/']}))
+    .pipe(sourcemaps.write())
+    .pipe(autoprefixer())
+    .pipe(uglifycss())
     .pipe(gulp.dest('build'));
 });
 
