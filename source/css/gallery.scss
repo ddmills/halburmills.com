@@ -1,0 +1,40 @@
+.gallery {
+  @include clearfix;
+}
+
+.gallery-image {
+  float: left;
+  margin: 0px;
+  width: 33.33%;
+  height: 150px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  &--main {
+    height: 300px;
+    padding-left: 0;
+  }
+}
+
+.gallery-image-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  & > img {
+    vertical-align: baseline;
+
+    width: auto;
+    height: 100%;
+
+    @include size(lg) {
+      width: 100%;
+      height: auto;
+    }
+
+    float: left;
+  }
+}

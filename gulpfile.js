@@ -10,22 +10,25 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const browserSync = require('browser-sync');
 
-const iconCSSPath = './node_modules/mdi/css/**/*';
-const iconFontPath = './node_modules/mdi/fonts/**/*';
-
 gulp.task('images', () => {
   return gulp
     .src('source/images/**/*')
     .pipe(gulp.dest('build/images'));
 });
 
+gulp.task('photoswipe', () => {
+  return gulp
+    .src('./node_modules/photoswipe/dist/**/*')
+    .pipe(gulp.dest('build/vendor/photoswipe'));
+});
+
 gulp.task('icons', () => {
   const css = gulp
-    .src(iconCSSPath)
+    .src('./node_modules/mdi/css/**/*')
     .pipe(gulp.dest('build/css'));
 
   const font = gulp
-    .src(iconFontPath)
+    .src('./node_modules/mdi/fonts/**/*')
     .pipe(gulp.dest('build/fonts'));
 
   return merge(css, font);
@@ -37,7 +40,7 @@ gulp.task('cname', () => {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('copy', ['images', 'cname', 'icons']);
+gulp.task('copy', ['images', 'cname', 'icons', 'photoswipe']);
 
 gulp.task('pug', () => {
   const localsPath = './pug.locals.json';
@@ -55,7 +58,9 @@ gulp.task('sass', () => {
   return gulp
     .src('source/**/main.scss')
     .pipe(plumber())
-    .pipe(sass.sync({ includePaths: ['node_modules/susy/sass'] }))
+    .pipe(sass.sync({ includePaths: [
+      'node_modules/',
+    ]}))
     .pipe(gulp.dest('build'));
 });
 

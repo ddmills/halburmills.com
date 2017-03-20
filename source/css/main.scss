@@ -1,4 +1,4 @@
-@import 'susy';
+@import 'susy/sass/susy';
 @import 'breakpoints';
 @import 'reset';
 @import 'config';
@@ -10,4 +10,5 @@
 @import 'landing';
 @import 'registry';
 @import 'map';
+@import 'gallery';
 @import 'animation/fade';

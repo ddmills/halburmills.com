@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import gallery from './gallery';
 import scrollMonitor from 'scrollmonitor';
 
 const profilesLeft = document.querySelectorAll('.profiles-left .profile');
@@ -25,3 +26,7 @@ overlay.onclick = () => {
   iframe.style.pointerEvents = 'auto';
   overlay.style.pointerEvents = 'none';
 };
+
+document
+  .querySelector('.gallery')
+  .addEventListener('click', gallery.show);

@@ -24,6 +24,7 @@
   "dependencies": {
     "gulp-plumber": "^1.1.0",
     "mdi": "^1.8.36",
+    "photoswipe": "^4.1.1",
     "scrollmonitor": "^1.0.13"
   }
 }
