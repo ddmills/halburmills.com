@@ -631,7 +631,9 @@ div.col-middle {
   overflow: hidden;
   text-align: center;
   text-align: center;
-  border-top: 5px solid #9f7e98; }
+  border-top: 5px solid #9f7e98;
+  background: url(../images/cover_3.jpg) no-repeat center center;
+  background-size: cover; }
 
 .page-landing-text {
   position: absolute;
@@ -702,6 +704,43 @@ div.col-middle {
   cursor: pointer;
   background-color: rgba(159, 126, 152, 0.03);
   box-shadow: 0px 0px 25px rgba(159, 126, 152, 0.4) inset; }
+
+.gallery:before {
+  display: table;
+  content: ""; }
+
+.gallery:after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+.gallery-image {
+  float: left;
+  margin: 0px;
+  width: 33.33%;
+  height: 150px;
+  padding-bottom: 10px;
+  padding-left: 10px; }
+  .gallery-image--main {
+    height: 300px;
+    padding-left: 0; }
+
+.gallery-image-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  .gallery-image-wrapper > img {
+    vertical-align: baseline;
+    width: auto;
+    height: 100%;
+    float: left; }
+    @media (min-width: 993px) {
+      .gallery-image-wrapper > img {
+        width: 100%;
+        height: auto; } }
 
 @keyframes fade-in-left {
   from {
