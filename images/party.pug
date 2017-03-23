@@ -1,0 +1,36 @@
+include section
+
+mixin profile(name, relation, photo)
+  .profile
+    .profile-image
+        img(src='images/wedding-party/' + name.toLowerCase() + '.png')
+    .profile-info
+      h3.profile-name #{name}
+      p.profile-relation #{relation}
+
+mixin profile-header(text)
+  h2.profile-header #{text}
+
++section()
+  h1 Wedding Party
+  .profiles
+    .profiles-left
+      +profile-header('Maid of Honor')
+      +profile('Dana', 'Sister of the Bride')
+      +profile-header('Bride\'s Attendants')
+      +profile('Elizabeth', 'Cousin of the Bride')
+      +profile('Dalton', 'Brother of the Bride')
+      +profile('Kayla', 'Cousin of the Groom')
+      +profile('Dwight', 'Brother of the Bride')
+      //- +profile-header('Ring Bearer')
+      //- +profile('Oliver', 'Cousin of the Bride')
+    .profiles-right
+      +profile-header('Best Woman')
+      +profile('Kerry', 'Sister of the Groom')
+      +profile-header('Groom\'s Attendants')
+      +profile('Andy', 'Friend of the Couple')
+      +profile('Tracy', 'Sister of the Groom')
+      +profile('Brian', 'Cousin of the Groom')
+      +profile('Lisa', 'Sister of the Groom')
+      //- +profile-header('Flower Girl')
+      //- +profile('Brooke', 'Niece of the Groom')
