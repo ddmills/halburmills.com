@@ -89,7 +89,7 @@ gulp.task('babel', () => {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('deploy', () => {
+gulp.task('deploy', ['build'], () => {
   return gulp
     .src('build/**/*')
     .pipe(deploy());
