@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gulp",
+    "clean": "gulp clean",
     "watch": "gulp watch",
     "deploy": "gulp deploy"
   },
@@ -14,7 +15,10 @@
     "browserify": "^13.1.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.4.1",
@@ -25,7 +29,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "gulp-plumber": "^1.1.0",
     "mdi": "^1.8.36",
     "photoswipe": "^4.1.1",
     "scrollmonitor": "^1.0.13"

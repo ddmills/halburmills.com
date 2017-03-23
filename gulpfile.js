@@ -1,10 +1,12 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const clean = require('gulp-clean');
 const plumber = require('gulp-plumber');
 const uglifycss = require('gulp-uglifycss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const imgmin = require('gulp-imagemin');
 const deploy = require('gulp-gh-pages');
 const babel = require('babelify');
 const merge = require('merge-stream');
@@ -13,9 +15,16 @@ const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const browserSync = require('browser-sync');
 
+gulp.task('clean', () => {
+  return gulp
+    .src('build', { read: false })
+    .pipe(clean({ force: true }));
+});
+
 gulp.task('images', () => {
   return gulp
     .src('source/images/**/*')
+    .pipe(imgmin())
     .pipe(gulp.dest('build/images'));
 });
 
