@@ -3,7 +3,7 @@ include section
 mixin profile(name, relation, photo)
   .profile
     .profile-image
-        img(src='images/wedding-party/' + name.toLowerCase() + '.png')
+        img(src='images/wedding-party/' + name.toLowerCase() + '.png' alt=name)
     .profile-info
       h3.profile-name #{name}
       p.profile-relation #{relation}
