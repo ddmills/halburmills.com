@@ -11561,7 +11561,71 @@ var images = [{
   w: 1024,
   h: 717
 }, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0070.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0119.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0155.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0166.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0184.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0211.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0335.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0366.jpg',
+  w: 1024,
+  h: 1536
+}, {
   src: 'images/gallery/DeeNBrentIowaEngagement2017-0299.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0490.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0663.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-9720.jpg',
+  w: 1024,
+  h: 1665
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0553.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-9936.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-9948.jpg',
+  w: 1024,
+  h: 1626
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-0035.jpg',
+  w: 1024,
+  h: 717
+}, {
+  src: 'images/gallery/DeeNBrentIowaEngagement2017-9955.jpg',
   w: 1024,
   h: 717
 }, {
