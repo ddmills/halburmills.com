@@ -102,10 +102,6 @@ const images = [{
   src: 'images/gallery/DeeNBrentIowaEngagement2017-9963.jpg',
   w: 1024,
   h: 717,
-},{
-  src: 'images/gallery/DeeNBrentIowaEngagement2017-0304.jpg',
-  w: 1024,
-  h: 717,
 }];
 
 const show = () => {
