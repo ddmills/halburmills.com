@@ -1,0 +1,79 @@
+.gotcha {
+  display: none;
+}
+
+.form-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+
+  &--required > .form-label::after {
+    content: "*";
+    color: #e28282;
+    margin-left: 4px;
+    display: inline-block;
+  }
+
+  & > .form-label {
+    flex-grow: 1;
+  }
+
+  & > .form-description {
+    flex-grow: 1;
+  }
+
+  & > .form-control {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.radio-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+  padding-left: 10px;
+
+  & > .radio {
+    float: left;
+    width: 20px;
+  }
+
+  & > .radio-description {
+    margin-left: 20px;
+  }
+}
+
+.form-label {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form-description {
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+  font-color: #777;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: $font-size;
+  border: 1px solid #aaa;
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $primary;
+    box-shadow: 0px 0px 2px $primary;
+  }
+}

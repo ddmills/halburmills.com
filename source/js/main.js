@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+import './rsvp';
 import gallery from './gallery';
 import scrollMonitor from 'scrollmonitor';
 

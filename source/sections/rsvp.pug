@@ -1,0 +1,41 @@
+include section
+
++section()
+  h1 R.S.V.P
+
+  form(action=formspree.url + "/" + formspree.email method='post').rsvp-form
+    .form-block.form-block--required
+      label(for='input-first-name').form-label Name
+      .form-description What is your full name?
+      input(type='text' name='first-name' placeholder="First" required).form-control#input-first-name
+      input(type='text' name='last-name' placeholder="Last" required).form-control#input-last-name
+
+    .form-block.form-block--required
+      label(for='input-email').form-label Email address
+      input(type='email' name='email' required).form-control#input-email
+      
+    .form-block.form-block--required
+      label(for='input-guests').form-label Guests
+      .form-description Name of each guest for whom you are replying (one name per line)
+      textarea(name='guests' required).form-control#input-guests
+
+    .form-block.form-block--required
+      .form-label R.S.V.P
+      .form-description Will you be attending the wedding ceremony on DD MM YY?
+      label.radio-group
+        input(type="radio" name='attending' value="yes" required).radio
+        .radio-description Will attend
+      label.radio-group
+        input(type="radio" name='attending' value="no" required).radio
+        .radio-description Will not attend
+
+    .form-block
+      label(for='input-notes').form-label Notes
+      .form-description Is there anything else you'd like to add?
+      textarea(name='notes').form-control#input-notes
+
+    input(type='text' name='_gotcha').gotcha
+    input(type='hidden' name='_subject' value="New RSVP Response!")
+    input(type='hidden' name='_next' value='/thanks.html')
+    input(type='hidden' name='_cc' value=formspree.cc)
+    input(type='submit' value='Send').btn.btn--primary.pull-right

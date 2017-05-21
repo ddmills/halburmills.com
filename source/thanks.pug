@@ -1,0 +1,11 @@
+extends base
+include sections/section
+
+block content
+  +section()
+    .center-text
+      h1 Thank you!
+      p Your R.S.V.P response has been sent.
+      .flourish
+        img(src='images/flourish.png')
+      a(href="/") Return to the main site.

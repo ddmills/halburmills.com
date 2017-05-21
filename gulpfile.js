@@ -60,7 +60,11 @@ gulp.task('pug', () => {
   delete require.cache[require.resolve(localsPath)];
 
   return gulp
-    .src('source/index.pug')
+    .src([
+      'source/index.pug',
+      'source/thanks.pug',
+      'source/rsvp.pug',
+    ])
     .pipe(plumber())
     .pipe(pug({ locals }))
     .pipe(gulp.dest('build'));

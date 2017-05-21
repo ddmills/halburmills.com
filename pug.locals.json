@@ -20,5 +20,10 @@
       "url": "http://www.target.com/gift-registry/giftgiver?registryId=fbc8ba7da2fd41ce8ed7b9f32819ac7e",
       "logo": "images/target-logo.png"
     }
+  },
+  "formspree": {
+    "url": "https://formspree.io",
+    "email": "mills.dalton@gmail.com",
+    "cc": "mills.dalton@gmail.com"
   }
 }
