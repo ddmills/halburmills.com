@@ -21,7 +21,7 @@ include section
 
     .form-block.form-block--required
       .form-label R.S.V.P
-      .form-description Will you be attending the wedding ceremony on DD MM YY?
+      .form-description Will you be attending Dee and Brent's wedding ceremony on Sunday, September 3rd, 2017?
       label.radio-group
         input(type="radio" name='attending' value="yes" required).radio
         .radio-description Will attend
@@ -36,6 +36,6 @@ include section
 
     input(type='text' name='_gotcha').gotcha
     input(type='hidden' name='_subject' value="New RSVP Response!")
-    input(type='hidden' name='_next' value='/thanks.html')
+    input(type='hidden' name='_next' value='/thanks')
     input(type='hidden' name='_cc' value=formspree.cc)
     input(type='submit' value='Send').btn.btn--primary.pull-right

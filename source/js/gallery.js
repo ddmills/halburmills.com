@@ -1,6 +1,7 @@
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
 let el = document.querySelector('.pswp');
+const container = document.querySelector('.gallery');
 
 const images = [{
   src: 'images/gallery/DeeNBrentIowaEngagement2017-0075.jpg',
@@ -109,4 +110,6 @@ const show = () => {
  gallery.init();
 };
 
-export default { show };
+if (container) {
+  container.addEventListener('click', show);
+}
