@@ -3,7 +3,7 @@ include section
 mixin profile(name, relation, photo)
   .profile
     .profile-image
-        img(src='images/wedding-party/' + name.toLowerCase() + '.png' alt=name)
+        img(src='images/wedding-party/' + photo + '.png' alt=name)
     .profile-info
       h3.profile-name #{name}
       p.profile-relation #{relation}
@@ -16,31 +16,31 @@ mixin profile-header(text)
   .profiles
     .profiles-left
       +profile-header('Maid of Honor')
-      +profile('Dana', 'Sister of the Bride')
+      +profile('Dana Mills', 'Sister of the Bride', 'dana')
       +profile-header('Bride\'s Attendants')
-      +profile('Elizabeth', 'Cousin of the Bride')
-      +profile('Dalton', 'Brother of the Bride')
-      +profile('Kayla', 'Cousin of the Groom')
-      +profile('Dwight', 'Brother of the Bride')
+      +profile('Elizabeth Onsrud', 'Cousin of the Bride', 'elizabeth')
+      +profile('Dalton Mills', 'Brother of the Bride', 'dalton')
+      +profile('Kayla Pudenz', 'Cousin of the Groom', 'kayla')
+      +profile('Dwight Mills', 'Brother of the Bride', 'dwight')
       +profile-header('Ring Bearer')
-      +profile('Oliver', 'Cousin of the Bride')
+      +profile('Oliver Beames', 'Cousin of the Bride', 'oliver')
 
     .profiles-right
       +profile-header('Best Woman')
-      +profile('Kerry', 'Sister of the Groom')
+      +profile('Kerry George', 'Sister of the Groom', 'kerry')
       +profile-header('Groom\'s Attendants')
-      +profile('Andy', 'Friend of the Couple')
-      +profile('Tracy', 'Sister of the Groom')
-      +profile('Brian', 'Cousin of the Groom')
-      +profile('Lisa', 'Sister of the Groom')
+      +profile('Andy Pudenz', 'Friend of the Couple', 'andy')
+      +profile('Tracy Moliter', 'Sister of the Groom', 'tracy')
+      +profile('Brian Koster', 'Cousin of the Groom', 'brian')
+      +profile('Lisa Neppel', 'Sister of the Groom', 'lisa')
       +profile-header('Flower Girl')
-      +profile('Brooke', 'Niece of the Groom')
+      +profile('Brooke Moliter', 'Niece of the Groom', 'brooke')
 
   .profiles
     .profiles-left
       +profile-header('Usher')
-      +profile('Jim', 'Friend of the Couple')
+      +profile('Jim Grabner', 'Friend of the Couple', 'jim')
 
     .profiles-right
       +profile-header('Usher')
-      +profile('John', 'Friend of the Couple')
+      +profile('John Grabner', 'Friend of the Couple', 'john')
